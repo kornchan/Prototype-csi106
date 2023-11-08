@@ -24,8 +24,7 @@ const majorFilter = document.getElementById("major");
 
 
 // ใช้ฟังก์ชันเพื่อกรองตารางเวลา
-facultyFilter.addEventListener("change", filterTimetable);
-majorFilter.addEventListener("change", filterTimetable);
+
 
 function filterTimetable() {
     const selectedFaculty = facultyFilter.value;
