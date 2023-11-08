@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตารางเวลา</title>
+    <link rel="stylesheet" href="css/style-index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"></head>
+
+<body>
+    <input type="checkbox" name="" id="check">
+    <label for="check">
+        <i class="bi bi-list" id="btn"></i>
+        <i class="bi bi-x-lg" id="cancel"></i>
+    </label>
+   <div class="sidebar">
+        <header><i class="bi bi-list"></i>Menu</header>
+            <ul>
+                <li><a href="/Main.html"><i class="bi bi-house-door"></i>Home</a></li>
+                <li><a href="#"><i class="bi bi-geo-alt"></i>งานใกล้ฉัน</a></li>
+                <li><a href="/index.html"><i class="bi bi-briefcase"></i>เริ่มต้นหางาน</a></li>
+            </ul>
+   </div>
+   <header class="head">
+    <nav class="title">
+        <span class="text-title">เลือกทั้งหมดเเล้วเราจะหางานที่เหมาะสำหรับคุณ</span>
+            <a href="#"><i class="bi bi-person-circle"></i></a>
+    </nav>
+   </header>
+    <main>
+        <div id="filter">
+            <label for="faculty">คณะ:</label>
+            <select id="faculty">
+                <option value="all" id="all-faculty">ทั้งหมด</option>
+                <option value="science" id="science">วิทยาศาสตร์</option>
+                <!-- เพิ่มตัวเลือกคณะเพิ่มเติมตามความต้องการ -->
+            </select>
+
+            <label for="major">สาขาวิชา:</label>
+            <select id="major">
+                <option value="all" id="all-major">ทั้งหมด</option>
+                <option value="math" id="math">คณิตศาสตร์</option>
+                <option value="physics" id="physics">ฟิสิกส์</option>
+                <!-- เพิ่มตัวเลือกสาขาเพิ่มเติมตามความต้องการ -->
+            </select>
+            <span class="btn"><button onclick="filterTimetable()">Enter</button></span>
+            <span class="reset"><button onclick="reset()">Reset</button></span>
+        </div>
+        <div id="student-timetable">
+            <h2>ตารางเวลาเรียนของนักศึกษา</h2>
+            <div id="student-calendar">
+                <!-- แสดงตารางเวลาเรียนของนักศึกษา -->
+            </div>
+        </div>
+        <div id="employer-timetable">
+            <h2>ตารางการเข้างานเเละคุณสมบัติ</h2>
+            <div id="employer-calendar">
+                <!-- แสดงตารางเวลาทำงานของนายจ้าง -->
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
